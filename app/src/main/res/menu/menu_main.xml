@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mywork.henry.henry_smarthome.MainActivity" >
+
+    <item android:id="@+id/Menu_Settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/settings_icon_4"
+        />
+    <item android:id="@+id/Menu_Refresh"
+        android:title="@string/menu_refresh"
+        android:orderInCategory="101"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/refesh_icon"
+        />
+    <item
+        android:id="@+id/Menu_Disconnection"
+        android:title="@string/hasdisconnected"
+        android:orderInCategory="99"
+        app:showAsAction="always"
+        android:icon="@drawable/disconnection_icon_2"
+        android:enabled="false"
+        android:visible="false"
+
+
+        />
+    <!--<item
+        android:id="@+id/Menu_Alert"
+        android:title="@string/hasalerted"
+        android:orderInCategory="98"
+        app:showAsAction="always"
+        android:icon="@drawable/warning_icon"
+        android:actionViewClass="android.widget.TextView"
+        />-->
+</menu>

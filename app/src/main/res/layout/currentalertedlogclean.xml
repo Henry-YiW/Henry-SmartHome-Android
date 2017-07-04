@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/whether_to_clear_alerts"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_purple"
+        android:id="@+id/Prompt"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/Prompt"
+        android:id="@+id/Clear"
+        android:text="Clear"
+        android:textAllCaps="true"
+        android:contentDescription="Clear"
+        android:layout_below="@id/Prompt"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffff4200"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Cancel"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:contentDescription="Cancel"
+        android:layout_alignTop="@id/Clear"
+        android:layout_alignEnd="@id/Prompt"/>
+</RelativeLayout>

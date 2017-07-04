@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/holo_blue_light</item>
+        <item name="colorPrimaryDark">@android:color/holo_blue_dark</item>
+        <item name="colorAccent">@color/My_Accent_Blue</item>
+        <item name="android:navigationBarColor">@android:color/holo_green_dark</item>
+        <item name="android:colorForeground">@android:color/holo_orange_light</item>
+        <item name="android:textColorSecondary">@android:color/holo_orange_light</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--设置边框-->
+        <item name="android:windowFrame">@null</item>
+
+    </style>
+
+    <style name="CustomDialogAnimation" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/popup_anim</item>
+        <item name="android:windowExitAnimation">@anim/popback_anim</item>
+    </style>
+
+    <style name="CustomDialogAnimationfromTop" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/popup_fromtop</item>
+        <item name="android:windowExitAnimation">@anim/popback_totop</item>
+    </style>
+
+    <style name="CustomFloatingActionButtonStyle" parent="android:Widget">
+        <item name="android:background">@drawable/my_fab_background</item>
+        <!--<item name="backgroundTint">?attr/colorAccent</item>-->
+        <item name="backgroundTint">@android:color/holo_blue_light</item>
+        <item name="fabSize">normal</item>
+        <item name="elevation">@dimen/my_fab_elevation</item>
+        <item name="pressedTranslationZ">@dimen/my_fab_translation_z_pressed</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+        <item name="borderWidth">@dimen/my_fab_border_width</item>
+    </style>
+</resources>

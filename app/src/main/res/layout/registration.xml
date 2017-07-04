@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="ifContentScrolls"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:padding="@dimen/activity_horizontal_margin"
+    android:isScrollContainer="true">
+
+    <EditText
+        android:paddingStart="3dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center|start"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:inputType="textUri"
+        android:id="@+id/URLText"
+        android:hint="URL"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="URLText"/>
+    <EditText
+        android:paddingStart="3dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center|start"
+        android:textSize="20sp"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_below="@id/URLText"
+        android:layout_alignStart="@+id/URLText"
+        android:hint="ID"
+        android:ems="10"
+        android:id="@+id/IDText"
+        android:contentDescription="IDText"
+        />
+    <EditText
+        android:paddingStart="3dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center|start"
+        android:textSize="20sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@id/IDText"
+        android:layout_alignBottom="@id/IDText"
+        android:layout_toEndOf="@+id/IDText"
+        android:hint="@string/nameortime"
+        android:ems="10"
+        android:id="@+id/NameText"
+        android:contentDescription="NameText"
+        />
+
+
+
+    <Switch
+        android:layout_marginStart="4dp"
+        android:text="@string/persistent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PersistentSwitch"
+        android:layout_below="@id/IDText"
+        android:layout_alignStart="@id/URLText"
+        android:contentDescription="PersistentSwitch"/>
+
+    <Switch
+        android:text="@string/alertable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AlertableSwitch"
+        android:layout_below="@id/PersistentSwitch"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="AlertableSwitch"/>
+    <Switch
+        android:text="@string/passive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PassiveSwitch"
+        android:layout_alignBaseline="@+id/PersistentSwitch"
+        android:layout_alignBottom="@+id/PersistentSwitch"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="PassiveSwitch"/>
+    <ExpandableListView
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Advanced"
+        android:layout_below="@id/AlertableSwitch"
+        />
+    <Button
+        android:text="@string/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Advanced"
+        android:layout_alignParentStart="true"
+        android:id="@+id/AddButton"
+        android:elevation="5dp"
+        android:contentDescription="AddButton"/>
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/AddButton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Count"
+        android:contentDescription="Count"/>
+    <Button
+        android:text="@string/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/AddButton"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/DoneButton"
+        android:elevation="5dp"
+        android:contentDescription="DoneButton"/>
+
+
+</RelativeLayout>
+</ScrollView>

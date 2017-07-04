@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/on" android:state_activated="true" android:drawable="@drawable/fab_10"/>
+    <item android:id="@+id/off" android:state_activated="false" android:drawable="@drawable/fab_1"/>
+
+    <transition
+        android:fromId="@+id/on"
+        android:toId="@+id/off"
+        android:drawable="@drawable/fab_off"/>
+    <transition
+        android:fromId="@+id/off"
+        android:toId="@+id/on"
+        android:drawable="@drawable/fab_on"/>
+</animated-selector>

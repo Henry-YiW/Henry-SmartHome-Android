@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="70" android:drawable="@drawable/electricity_icon"/>
+    <item android:duration="70" android:drawable="@drawable/electricity_icon4"/>
+    <item android:duration="70" android:drawable="@drawable/electricity_icon3"/>
+    <item android:duration="70" android:drawable="@drawable/electricity_icon2"/>
+    <item android:duration="70" android:drawable="@drawable/electricity_icon1"/>
+
+</animation-list>

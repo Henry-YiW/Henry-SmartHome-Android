@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="line"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="20dp" android:color="@color/My_Green"
+        android:dashWidth="8dp" android:dashGap="3dp" />
+    <!-- 虚线的高度 -->
+
+</shape>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingStart="@dimen/normal_loginpaddingstart"
+    android:paddingEnd="@dimen/normal_loginpaddingstart"
+    android:paddingBottom="20dp">
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/user"
+        android:ems="10"
+        android:id="@+id/user" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="@string/password"
+        android:id="@+id/password"
+        android:layout_below="@id/user"/>
+
+    <TextView
+        android:text="@string/internet_amp_local_host_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/host_address"
+        android:gravity="center"
+        android:layout_below="@id/password"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:hint="@string/local_host_address"
+        android:ems="10"
+        android:id="@+id/LocalHost"
+        android:layout_below="@id/host_address"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:hint="@string/internet_host_address"
+        android:ems="10"
+        android:id="@+id/InternetHost"
+        android:layout_below="@id/LocalHost"/>
+
+    <Button
+        android:text="@string/set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Set"
+        android:textSize="15sp"
+        android:layout_below="@id/InternetHost"
+        />
+
+    <Button
+        android:text="@string/change_user_amp_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ChangeLogin"
+        android:layout_below="@id/Set"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        />
+</LinearLayout>

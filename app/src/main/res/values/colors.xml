@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_colorPrimary">#3f51b5</color>
+    <color name="default_colorPrimaryDark">#303F9F</color>
+    <color name="default_colorAccent">#ff4081</color>
+    <color name="My_Green">#67e61e</color>
+    <color name="My_Orange">#ffee05</color>
+    <color name="My_Accent_Blue">#60d4ff</color>
+    <color name="default_backgroundColor">#fffafafa</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+</resources>

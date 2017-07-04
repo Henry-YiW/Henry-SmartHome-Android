@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#c0000000"
+    android:gravity="center"
+    android:clickable="true">
+    <ScrollView
+        android:layout_width="@dimen/settings_width"
+        android:layout_height="wrap_content"
+        android:overScrollMode="ifContentScrolls"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:isScrollContainer="true"
+            android:background="@color/default_backgroundColor"
+            android:id="@+id/colorpickerset">
+            <com.larswerkman.holocolorpicker.ColorPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:requiresFadingEdge="horizontal"
+                android:layout_gravity="center"
+                android:id="@+id/ColorPicker"
+                />
+            <com.larswerkman.holocolorpicker.OpacityBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/OpacityBar"/>
+            <com.larswerkman.holocolorpicker.SVBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/SVBar"/>
+            <com.larswerkman.holocolorpicker.SaturationBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/SaturationBar"/>
+            <com.larswerkman.holocolorpicker.ValueBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ValueBar"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set"
+                android:textColor="#ffffffff"
+                android:id="@+id/SetColor"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:duration="70" android:drawable="@drawable/lighton_shape1" />
+  <item android:duration="70" android:drawable="@drawable/lighton_shape2" />
+  <item android:duration="70" android:drawable="@drawable/lighton_shape3" />
+  <item android:duration="70" android:drawable="@drawable/lighton_shape4" />
+  <item android:duration="70" android:drawable="@drawable/lighton_shape5" />
+  <item android:duration="70" android:drawable="@drawable/lighton_shape6" />
+</animation-list>
