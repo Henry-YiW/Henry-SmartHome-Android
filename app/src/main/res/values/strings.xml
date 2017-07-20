@@ -63,4 +63,6 @@
     <string name="Settings">Settings</string>
     <string name="Successfully_Changed_Login">Successfully Changed Login</string>
     <string name="Failed_to_Connect">Failed to Connect</string>
+    <string name="clear">Clear</string>
+    <string name="cancel">Cancel</string>
 </resources>

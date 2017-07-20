@@ -62,6 +62,8 @@
     <string name="ApparatusConfiguration">电器设置</string>
     <string name="DebugConfiguration">调试设置</string>
     <string name="Settings">设置</string>
-    <string name="Successfully_Changed_Login">Successfully Changed Login</string>
-    <string name="Failed_to_Connect">Failed to Connect</string>
+    <string name="Successfully_Changed_Login">成功更改登录设置</string>
+    <string name="Failed_to_Connect">连接失败</string>
+    <string name="clear">清除</string>
+    <string name="cancel">取消</string>
 </resources>
