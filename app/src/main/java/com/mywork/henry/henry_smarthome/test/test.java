@@ -16,6 +16,7 @@ import com.mywork.henry.henry_smarthome.OKHttpTool;
 
 import org.json.JSONObject;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.*;
 import java.sql.*;
@@ -40,7 +41,7 @@ public class test extends Object{
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
+        new String(new byte[20],0,0);
     }
 
     class ddd<e extends Drawable.Callback>{

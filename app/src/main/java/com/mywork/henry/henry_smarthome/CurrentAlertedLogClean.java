@@ -3,6 +3,7 @@ package com.mywork.henry.henry_smarthome;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
@@ -21,10 +22,13 @@ import java.util.Map;
 
 public class CurrentAlertedLogClean extends DialogFragment {
     Bundle State;volatile String ClearButtonDescription;
+    private View.OnClickListener ClearOnClickListener;
+    private View.OnClickListener CancelOnClickListener;
+    Handler handler = new Handler();
     OKHttpTool.processString processString = new OKHttpTool.processString() {
         @Override
         public void onResponse(String value) {
-            View view=null;
+            View view;
             Log.d("Body",value);
             view=getView().findViewById(R.id.Clear);
             resetEnabled(view, ClearButtonDescription);
@@ -78,27 +82,76 @@ public class CurrentAlertedLogClean extends DialogFragment {
         if (getCustomState()!=null) {
             Clear.setEnabled(getCustomState().getBoolean(Clear.getContentDescription()+"Enabled", true));
         }
-        Clear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Map<String, String> parameters = new HashMap<>();
-                parameters.put("user",user);
-                parameters.put("pass",pass);
-                parameters.put("Delete","true");
-                parameters.put("Type","CurrentAlertedLog");
-                OKHttpTool.asyncPostFormforString(URL, parameters,processString,processFailure,1);
-                v.setEnabled(false);
-            }
-        });
+        if (ClearOnClickListener==null){
+            ClearOnClickListener=new ClearOnClickListener();
+        }
+
         Button Cancel = (Button)view.findViewById(R.id.Cancel);
-        Cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dismiss();
-            }
-        });
+        if (CancelOnClickListener==null){
+            CancelOnClickListener=new CancelOnClickListener();
+        }
+        Clear.setOnClickListener(ClearOnClickListener);
+        Log.d("ClearOnclick","Set");
+        Cancel.setOnClickListener(CancelOnClickListener);
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        /*View view=getView();
+        if (view==null){
+            return;
+        }
+        final Button Clear=(Button) view.findViewById(R.id.Clear);
+        ClearButtonDescription =Clear.getContentDescription().toString();
+        if (getCustomState()!=null) {
+            Clear.setEnabled(getCustomState().getBoolean(Clear.getContentDescription()+"Enabled", true));
+        }
+        if (ClearOnClickListener==null){
+            ClearOnClickListener=new ClearOnClickListener();
+        }
+
+        final Button Cancel = (Button)view.findViewById(R.id.Cancel);
+        if (CancelOnClickListener==null){
+            CancelOnClickListener=new CancelOnClickListener();
+        }
+        Clear.setOnClickListener(ClearOnClickListener);
+        Log.d("ClearOnclick","Set");
+        Cancel.setOnClickListener(CancelOnClickListener);
+        //handler.postDelayed(new Runnable() {
+        //    @Override
+        //    public void run() {
+        //
+        //    }
+        //},900);*/
+    }
+
+    private class ClearOnClickListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            Bundle ConfigurationsSet = getArguments();
+            String URL=ConfigurationsSet.getString("URL");
+            String user=ConfigurationsSet.getString("user");
+            String pass=ConfigurationsSet.getString("pass");
+            Map<String, String> parameters = new HashMap<>();
+            parameters.put("user",user);
+            parameters.put("pass",pass);
+            parameters.put("Delete","true");
+            parameters.put("Type","CurrentAlertedLog");
+            OKHttpTool.asyncPostFormforString(URL, parameters,processString,processFailure,1);
+            v.setEnabled(false);
+        }
+    }
+
+    private class CancelOnClickListener implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            dismiss();
+        }
     }
 
     void resetEnabled (View v,String Key){
