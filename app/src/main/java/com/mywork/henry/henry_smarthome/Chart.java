@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 
-public class Chart extends ImageView {
+public class Chart extends android.support.v7.widget.AppCompatImageView {
     public static volatile boolean haswiped;
     Canvas canvasback;Paint paint = new Paint();private ArrayList<setting> settings=new ArrayList<>(100);
     setting setting; public final static int Text_Top=1;public final static int Text_Center=2;
@@ -33,9 +33,7 @@ public class Chart extends ImageView {
         super(context, attrs, defStyleAttr);
     }
 
-    public Chart(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes){
-        super(context,attrs,defStyleAttr,defStyleRes);
-    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
