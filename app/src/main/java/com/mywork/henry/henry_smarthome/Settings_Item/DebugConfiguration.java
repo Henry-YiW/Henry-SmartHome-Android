@@ -53,7 +53,7 @@ public class DebugConfiguration extends Fragment {
             parameters.put("pass", "yiweigang");
             parameters.put("Refresh", "Get");
             //String tempURL = "http://henry95-home.asuscomm.com:9982/Smart_Home/debugconfig?Refresh=Get&user=henry&pass=yiweigang";
-            String tempURL = "http://192.168.1.20:8080/Smart_Home/debugconfig?Refresh=Get&user=henry&pass=yiweigang";
+            String tempURL = "http://168.150.116.167:8080/Smart_Home/debugconfig?Refresh=Get&user=henry&pass=yiweigang";
             //webview.loadUrl(Data.getURL(Data.debugconfig,true));
 
             webview.setBackgroundColor(getResources().getColor(R.color.default_backgroundColor));

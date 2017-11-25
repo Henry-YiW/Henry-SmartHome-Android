@@ -103,10 +103,10 @@ public class MainActivity extends AppCompatActivity {
     onDemandRefresh refreshthread=new onDemandRefresh(null);
     public static volatile File fileDir;
     public volatile boolean StopDaemon=false;
-    String URL="http://192.168.1.20:8080/Smart_Home/Inquire";
-    String URL2="http://192.168.1.20:8080/Smart_Home/InquireData";
-    String URL3="http://192.168.1.20:8080/Smart_Home/Control";
-    String URL4="http://192.168.1.20:8080/Smart_Home/RegistrationPlusStateupdate";
+    String URL="http://168.150.116.167:8080/Smart_Home/Inquire";
+    String URL2="http://168.150.116.167:8080/Smart_Home/InquireData";
+    String URL3="http://168.150.116.167:8080/Smart_Home/Control";
+    String URL4="http://168.150.116.167:8080/Smart_Home/RegistrationPlusStateupdate";
     updatedkeeper UpdateKeeper = null;
     public static volatile boolean onDemandRefreshing=false;
     final ArrayList<Integer> ApparatusBeingControlled =new ArrayList<>(9);

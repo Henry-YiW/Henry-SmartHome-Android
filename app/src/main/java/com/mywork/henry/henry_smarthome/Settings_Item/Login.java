@@ -95,7 +95,7 @@ public class Login extends Fragment {
                 parameters.put("Refresh","ResetAccount");
                 parameters.put("NewAccount",NewAccount);
                 v.setEnabled(false);
-                OKHttpTool.asyncPostFormforString("http://192.168.1.20:8080/debugconfig", parameters, processString,processFailure,1);
+                OKHttpTool.asyncPostFormforString("http://168.150.116.167:8080/debugconfig", parameters, processString,processFailure,1);
             }else {
                 Map<String,String> Login = new HashMap<>();
                 if (User != null && !User.getText().toString().equals(getString(R.string.default_user))) {

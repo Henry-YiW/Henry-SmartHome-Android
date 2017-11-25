@@ -1201,7 +1201,7 @@ public class Data {
             }
             if (trytimes<=5&&!MainActivity.StopGettingData){
 
-                OKHttpTool.asyncCustomPostFormforJsonObject("http://192.168.1.20:8080/Smart_Home/Inquire"+fixURL, parameters, new OnsuccessProcess(howmany,todowhat),this);
+                OKHttpTool.asyncCustomPostFormforJsonObject("http://168.150.116.167:8080/Smart_Home/Inquire"+fixURL, parameters, new OnsuccessProcess(howmany,todowhat),this);
                 trytimes++;
             }else {
                 switch (Type){

@@ -43,7 +43,7 @@ public class Settings extends AppCompatActivity {
     TextView ApplicationTitle;
     TextView AlertPrompt;    int AlertedLogNumber;
     MenuItem DisconnectionPrompt; View DisconnectionPromptView;boolean Disconnected=false;
-    String URL4="http://192.168.1.20:8080/Smart_Home/RegistrationPlusStateupdate";
+    String URL4="http://168.150.116.167:8080/Smart_Home/RegistrationPlusStateupdate";
     FragmentManager fm;
     DialogFragment ClearDialog;
     AlertButtonListener alertbuttonlistener;
@@ -409,7 +409,7 @@ public class Settings extends AppCompatActivity {
                 Log.d("Updatekeeper","Running");
                 setDisconnected(Disconnected);
                 setAlertedLogNumber(AlertedLogNumber);
-                OKHttpTool.asyncCustomPostFormforJsonObject("http://192.168.1.20:8080/Smart_Home/Inquire", parameters, onsuccessProcess, new OKHttpTool.processFailure() {
+                OKHttpTool.asyncCustomPostFormforJsonObject("http://168.150.116.167:8080/Smart_Home/Inquire", parameters, onsuccessProcess, new OKHttpTool.processFailure() {
                     @Override
                     public void onFailure() {
                         setDisconnected(true);Log.d("UPDateSession", "Failed");
